@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>busca tu pokemon </title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" media="only screen and (max-width: 576px)" href="./assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/pokeball-8.png">
+    <!-- Mis estilos css-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--Buscar pokemon-->
+    <a href="https://fontmeme.com/es/fuente-pokemon/"><img src="https://fontmeme.com/permalink/200828/264f5fa61ad9f01b0b1e613154b7a68a.png" alt="fuente-pokemon" border ="0"></a>
+
+    <div class="uk-child-width-1-2@s uk-grid-match uk-padding-large " uk-grid>
+        <div class="uk-card uk-card-default  uk-card-body">
+
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-text"></label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" placeholder="ingresa nombre o numero del 1 al 700" id="pokemon1" type="text">
+                   
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-horizontal-select"></label>
+                <div class="uk-form-controls">
+                    <button class="uk-button uk-button-default" onclick="consultarPokemon()"><span uk-icon="search">Buscar </span></button>
+                </div>
+            </div>
+
+    </div>
+    <div class="uk-background-contain  uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle">        >
+    </div>
+</div>
+<!-- Pokemon resultado-->
+
+
+
+
+        <div class="container" id="carousel1">
+            <div class="row">
+                <div class="col">
+                    <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active text-center">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-14.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-17.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-49.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-57.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-78.png" class="img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-88.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokemon-99.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="./assets/img/pokeball-8.png" class=" img-fluid" alt="PRINCIPAL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="datos-pokemon"  class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-6@s " uk-grid>
+        <div class="uk-card-body">
+            <h3 id="nombre-pokemon"></h3>
+            <a href="https://fontmeme.com/fuentes/fuente-pokmon/"><img src="https://fontmeme.com/permalink/200828/60e87752ad57b3054648fa7b4c83c8b5.png" alt="fuente-pokmon" border="0"></a>
+        </div>
+    <img id="imagen-pokemon-1" src="" alt="imagen pokemon 1" onerror="this.onerror=null; this.src='./assets/img/whos_that_pokemon_eevee.png'" >
+    <img id="imagen-pokemon-2" src="" alt="imagen pokemon 2" onerror="this.onerror=null; this.src='./assets/img/quepokemones.jpg'">
+    <img id="imagen-pokemon-3" src="" alt="imagen pokemon 3" onerror="this.onerror=null; this.src='./assets/img/who_pokemon.jpg'">
+    <img id="imagen-pokemon-4" src="" alt="imagen pokemon 4" onerror="this.onerror=null; this.src='./assets/img/maxresdefault.jpg'">
+    <img id="imagen-pokemon-5" src="" alt="imagen pokemon 5" onerror="this.onerror=null; this.src='./assets/img/maxresdef.jpg'">
+    </div>
+
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+
+
+    <!-- Canvas JS 1.7.0-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.js"></script>
+    <!-- Mis scripts-->
+    <script src="./assets/js/script.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+    <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
+</body>
+
+</html>

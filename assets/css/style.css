@@ -1,0 +1,25 @@
+body{
+    background-image: url(../img/gobattleleague-announcement-2.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#datos-pokemon{
+    background: border-box;
+    
+}
+.inputcss{
+    outline: none;
+    margin-bottom: 10px;
+
+    width: 350px;
+    height: 50px;  
+}
+.uk-card{
+    background: unset;
+}
+ .uk-button{
+    width: 30%;
+    background-color: crimson;
+    color: azure;
+} 
